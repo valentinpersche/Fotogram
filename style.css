@@ -1,0 +1,211 @@
+*{
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.711);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dNone {
+  display: none;
+}
+
+.headerContainer {
+  height: 80px;
+  width: 100%;
+  background-color: rgb(12, 22, 46);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.headerLogoContainer {
+  display: flex;
+  align-items: center;
+  padding-left: 14px;
+}
+
+.headerLogo {
+  height: 50px;
+}
+
+.mainContainer {
+  background-color: rgb(3, 6, 12);
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 80px 25px 50px;
+}
+
+.footerContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: rgb(12, 22, 46);
+  height: 100px;
+  flex-shrink: 0;
+}
+
+.footerLogo{
+    height: 50px;
+    width: 200px;
+}
+
+h1 {
+  color: white;
+  font-family: sans-serif;
+  font-size: 40px;
+  padding: 30px 0;
+  margin: 0;
+}
+
+.closeButtonContainer {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.imageContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.smallImage {
+  width: 150px;
+  height: 150px;
+  border-radius: 10px;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.smallImage:hover {
+  transform: scale(1.07);
+  transition: 200ms ease;
+  box-shadow: 15px 15px 9px -14px rgb(255, 40, 72),
+    -15px -15px 9px -14px rgb(15, 245, 252);
+  cursor: pointer;
+}
+
+.footerText {
+  color: white;
+  padding-left: 10px;
+}
+
+.dialogContainer {
+  background-color: rgb(12, 22, 46);
+  width: 500px;
+  height: 700px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 10;
+}
+
+.bigImage {
+  width: 400px;
+  height: 500px;
+  object-fit: cover;
+}
+
+.dialogPTags {
+  font-family: sans-serif;
+  color: white;
+  font-size: 20px;
+}
+
+.menuArrows {
+  display: flex;
+  gap: 50px;
+  cursor: pointer;
+}
+
+.arrow {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+}
+
+.closeImage {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.noHoverEffect {
+    transform: none !important;
+    box-shadow: none !important;
+    transition: none !important;
+  }
+  
+@media (max-width: 550px) {
+  .dialogContainer {
+    width: 400px;
+  }
+  .bigImage {
+    width: 350px;
+    height: 400px;
+  }
+}
+
+@media (max-width: 450px) {
+  .dialogContainer {
+    width: 350px;
+  }
+  .bigImage {
+    width: 300px;
+    height: 400px;
+  }
+}
+
+@media (max-width: 380px) {
+    .dialogContainer {
+      width: 300px;
+    }
+    .bigImage {
+      width: 280px;
+      height: 400px;
+    }
+.footerLogo{
+    width: 150px;
+}
+  }
+
+@media (max-height: 800px) {
+  .dialogContainer {
+    height: 500px;
+  }
+  .bigImage {
+    width: 300px;
+    height: 250px;
+  }
+}

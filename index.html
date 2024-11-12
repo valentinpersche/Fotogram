@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fotogram</title>
+    <link rel="icon" type="image/x-icon" href="./img/favicon_fotogram.png">
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+  </head>
+  <body onload="renderImages()">
+    <div class="overlay dNone" id="overlay" onclick="toggleOverlay()">
+      <div class="dialogContainer" onclick="event.stopPropagation()">
+        <div class="closeButtonContainer">
+        <img onclick="toggleOverlay()" class="closeImage" src="./img/delete.png" alt="">
+    </div>
+        <div class="imageNameContainer">
+          <p class="dialogPTags" id="pictureName"></p>
+        </div>
+        <div class="dialogPictureContainer" id="dialogPictureContainer"></div>
+        <div class="menuArrows">
+          <img
+            onclick="moveBackward(event)"
+            class="arrow"
+            src="./img/left-arrow.png"
+            alt="Pfeil nach links"
+          />
+          <p class="dialogPTags" id="imageCount">1/10</p>
+          <img
+            onclick="moveForward(event)"
+            class="arrow"
+            src="./img/right-arrow.png"
+            alt="Pfeil nach rechts"
+          />
+        </div>
+      </div>
+    </div>
+    <header class="headerContainer">
+      <div class="headerLogoContainer">
+        <img
+          src="./img/logo_fotogram.svg"
+          alt="Fotogram-Logo"
+          class="headerLogo"
+        />
+      </div>
+    </header>
+    <main class="mainContainer">
+      <h1>Mein Album</h1>
+      <div class="imageContainer" id="imageContainer"></div>
+    </main>
+    <footer class="footerContainer">
+      <img class="footerLogo" src="./img/logo_fotogram.svg" alt="" />
+      <p class="footerText">by Valentin Persche</p>
+    </footer>
+  </body>
+</html>
